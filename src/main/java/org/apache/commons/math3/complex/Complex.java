@@ -143,7 +143,7 @@ public class Complex implements FieldElement<Complex>, Serializable {
             return true;
         } else if (other instanceof Complex) {
             Complex c = (Complex)other;
-            if (!c.isNaN) {
+            if (c.isNaN) {
                 return this.isNaN;
             } else {
                 return MathUtils.equals(this.real, c.real) && MathUtils.equals(this.imaginary, c.imaginary);
